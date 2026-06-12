@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo 2-1: El Castillo de Bowser</title>
+    <link rel="stylesheet" href="css/actividad2.css">
+    <!-- Fuente estilo retro -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="fondo-castillo-bowser">
+        <div class="perfil">
+
+    <img id="perfilAvatar" class="perfil-avatar">
+
+    <span id="perfilNombre"></span>
+
+</div>
+
+
+    <div class="interfaz-usuario">
+        <p>MONEDAS: <span id="contador-monedas">0</span></p>
+        <p>MUNDO 2-2</p>
+    </div>
+
+    <div class="contenedor-castillo">
+        <h2 class="titulo-alerta">¡ALERTA! ¡UN ENEMIGO APARECE!</h2>
+        
+        <!-- Contenedor del Jefe Bowser -->
+        <div class="zona-bowser">
+            <!-- Si tienes una imagen de Bowser, puedes poner su ruta en el src -->
+            <img id="img-bowser" src="img/bowser.png" alt="👾" class="bowser-pixel">
+            
+            <!-- Globo de diálogo estilo RPG clásico -->
+            <div class="globo-dialogo">
+                <p id="texto-bowser">...</p>
+            </div>
+        </div>
+
+        <!-- Contenedor del botón de acción -->
+        <div class="zona-botones">
+            <button id="btn-aceptar-reto" onclick="aceptarReto()" class="btn-reto" style="display: none;">¡SÍ, ESTOY LISTO!</button>
+        </div>
+        
+                <div class="zona-botones" style="display: flex; gap: 20px; justify-content: center;">
+            <button id="btn-aceptar-reto" onclick="aceptarReto()" class="btn-reto" style="display: none;">¡SÍ, ESTOY LISTO!</button>
+            <!-- NUEVO BOTÓN DE REPASO -->
+            <button id="btn-repaso" onclick="irARepaso()" class="btn-repaso" style="display: none;">NO, QUIERO REPASAR</button>
+        </div>
+    
+    
+    </div>
+
+    <script src="js/actividad2.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

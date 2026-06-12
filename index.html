@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Educativa - Mario Style</title>
+    <!-- Fuentes y Estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+    <div class="contenedor" id="loginCard">
+        <!-- Logotipo -->
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h2>BIENVENIDO</h2>
+        
+        <!-- Input de Nombre -->
+        <input type="text" id="nombre" placeholder="TU NOMBRE..." autocomplete="off">
+
+        <!-- Selector de Avatares -->
+        <h3>SELECCIONA AVATAR:</h3>
+        <div class="avatares">
+            <img src="img/avatar1.png" alt="Avatar 1" onclick="seleccionarAvatar(this, 1)">
+            <img src="img/avatar2.png" alt="Avatar 2" onclick="seleccionarAvatar(this, 2)">
+            <img src="img/avatar3.png" alt="Avatar 3" onclick="seleccionarAvatar(this, 3)">
+        </div>
+
+        <!-- Botón de Acción -->
+        <button onclick="ingresar()" id="btnIngresar">
+            INGRESAR
+        </button>
+    </div>
+
+    <!-- Elemento de audio oculto con bucle -->
+    <audio id="musicaFondo" src="sonidos/mario-theme.mp3" loop></audio>
+
+    <!-- Vinculación del Script -->
+    <script src="js/index.js"></script>
+</body>
+</html>

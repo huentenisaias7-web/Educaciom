@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Salón de la Fama Matemático!</title>
+    <link rel="stylesheet" href="css/tabla_final.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+    <audio id="musicaVictoria" src="sonidos/mario-credits.mp3" loop></audio>
+
+    <div class="contenedor-final">
+        <h1 class="titulo-final">👑 ¡JUEGO TERMINADO! 👑</h1>
+        
+        <div class="perfil-campeon">
+            <img id="avatarFinal" class="avatar-grande" alt="Campeón">
+            <h2 id="mensajeFelicitaciones">¡Felicidades, Héroe!</h2>
+        </div>
+
+        <table class="tabla-puntos">
+            <thead>
+                <tr>
+                    <th>MUNDO</th>
+                    <th>MONEDAS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="fila-roja">
+                    <td>1. SUMAS</td>
+                    <td>🪙 x <span id="totalSuma">0</span></td>
+                </tr>
+                <tr class="fila-azul">
+                    <td>2. RESTAS</td>
+                    <td>🪙 x <span id="totalResta">0</span></td>
+                </tr>
+                <tr class="fila-amarilla">
+                    <td>3. MULTIPLICAR</td>
+                    <td>🪙 x <span id="totalMulti">0</span></td>
+                </tr>
+                <tr class="fila-verde">
+                    <td>4. DIVIDIR</td>
+                    <td>🪙 x <span id="totalDiv">0</span></td>
+                </tr>
+                <tr class="fila-total">
+                    <td>TOTAL GENERAL</td>
+                    <td>⭐ <span id="totalGlobal">0</span> DE <span id="maximoGlobal">240</span> PUNTOS</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="nota-final">¡Has salvado al Reino de los Números con tu inteligencia!</p>
+
+        <button onclick="reiniciarTodo()" class="btn-reiniciar">VOLVER A JUGAR</button>
+    </div>
+
+    <script src="js/tabla_final.js"></script>
+</body>
+</html>

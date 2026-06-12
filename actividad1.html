@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo 1: Colores</title>
+    <link rel="stylesheet" href="css/actividad1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="fondo-mario">
+
+    <div id="intro-tuberia" class="pantalla-intro">
+        <div class="escena-tuberia">
+            <img id="avatarIntro" class="avatar-tuberia" src="" alt="Avatar">
+            <div class="tuberia-mario"></div>
+        </div>
+    </div>
+
+    <audio id="sonidoTuberia" src="sonidos/mario-tubo.mp3"></audio>
+
+    <div class="perfil">
+        <img id="perfilAvatar" class="perfil-avatar">
+        <span id="perfilNombre"></span>
+    </div>
+
+    <div class="interfaz-usuario">
+        <p>MONEDAS: <span id="contador">0</span></p>
+        <p>MUNDO 1-2</p>
+    </div>
+
+    <div class="contenedor-juego">
+        <h2 class="titulo-pixel">¡APRENDE LOS COLORES!</h2>
+
+        <div class="seccion-aprendizaje">
+            <p id="instruccion">Haz clic en el bloque para revelar el color</p>
+
+            <div id="bloquePregunta" class="bloque-misterioso">?</div>
+
+            <div id="resultado" class="resultado-oculto">
+                <span id="numeroTexto" class="texto-color"></span>
+                
+                <div class="fila-color">
+                    <div id="colorCirculo" class="color-muestra"></div>
+                    <img id="imagenColor" class="imagen-muestra" src="" alt="Objeto del color" style="display: none;">
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button id="btnSiguiente" onclick="siguienteLeccion()" class="btn-siguiente">
+                SIGUIENTE
+            </button>
+            <button id="btnIrAlJuego" onclick="window.location.href='juego1.html'" class="btn-siguiente" style="display: none; background-color: #ff5722;">
+                ¡IR AL JUEGO 1-2!
+            </button>
+        </div>
+    </div>
+
+    <script src="js/perfil.js"></script>
+    <script src="js/actividad1.js"></script>
+</body>
+</html>

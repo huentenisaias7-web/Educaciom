@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo 1-2: El Juego de los Colores</title>
+    <link rel="stylesheet" href="css/juego1.css">
+    <!-- Fuente estilo retro -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="fondo-mario">
+        <div class="perfil">
+
+    <img id="perfilAvatar" class="perfil-avatar">
+
+    <span id="perfilNombre"></span>
+
+</div>
+
+
+    <div class="interfaz-usuario">
+        <p>MONEDAS: <span id="contador">0</span></p>
+        <p>NIVEL 1-2</p>
+    </div>
+
+    <div class="contenedor-juego">
+        <h2 class="titulo-pixel">¡ORDENA LOS COLORES!</h2>
+        <p id="instruccion">Arrastra cada color a su bloque con nombre escrito</p>
+
+        <!-- Zona de los bloques de colores que se arrastran -->
+        <div id="contenedorColores" class="zona-arrastre"></div>
+
+        <!-- Zona de los nombres donde se deben soltar -->
+        <div id="contenedorDestinos" class="zona-destino"></div>
+
+        <!-- Mensaje de error genérico o de éxito -->
+        <div id="mensajeFeedback" class="mensaje-alerta"></div>
+
+        <div style="margin-top: 20px;">
+            <!-- Botón para comprobar las respuestas -->
+            <button id="btnVerificar" onclick="verificarRespuestas()" class="btn-siguiente" style="background-color: #f8b800; color: black;">VERIFICAR</button>
+            
+            <!-- Este botón solo se verá al ganar el juego -->
+            <button id="btnSiguienteMundo" onclick="window.location.href='juego2.html'" class="btn-siguiente" style="display: none; background-color: #00a230;">¡IR AL NIVEL 2-2!</button>
+        </div>
+    </div>
+
+    <script src="js/juego1.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

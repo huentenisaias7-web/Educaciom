@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo 2-1: ¡El Desafío del Color!</title>
+    <link rel="stylesheet" href="css/juego3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="fondo-juego">
+
+    <div class="perfil">
+        <img id="perfilAvatar" class="perfil-avatar" alt="Avatar">
+        <span id="perfilNombre">Cargando...</span>
+    </div>
+
+    <div class="interfaz-usuario">
+        <p>MONEDAS: <span id="contador-monedas">0</span></p>
+        <p id="indicador-nivel">NIVEL 1/2</p>
+    </div>
+
+    <div class="contenedor-principal">
+        <div id="contenedor-vida-boss" class="contenedor-vida-boss" style="display: none;">
+            <p>BOWSER HP</p>
+            <div class="barra-vida-borde">
+                <div id="barra-vida-llenado" class="barra-vida-llenado"></div>
+            </div>
+        </div>
+
+    <!-- Busca la zona-personaje en tu juego3.html y déjala así: -->
+        <div class="zona-personaje">
+            <!-- Iniciará con la imagen del Koopa al cargar la pantalla -->
+            <img id="sprite-enemigo" src="img/koopa.png" alt="🐢" class="sprite-pixel">
+            <div class="globo-dialogo">
+                <p id="texto-pantalla">¡Demuestra lo que sabes! Selecciona los colores que te pida.</p>
+            </div>
+        </div>
+        
+        <div class="zona-interactiva">
+            <h2 id="instruccion-color" class="instruccion-color">...</h2>
+            <div id="cuadricula-opciones" class="cuadricula-opciones"></div>
+        </div>
+    </div>
+
+    <div id="pantalla-logro" class="modal-logro" style="display: none;">
+        <div class="contenido-logro">
+            <h2>🏆 ¡LOGRO DESBLOQUEADO! 🏆</h2>
+            <p>¡Has derrotado a Bowser y salvaste el Reino de los Colores!</p>
+            <div class="medalla-pixel">⭐</div>
+            <p class="felicitacion">¡Felicidades, Campeón/a!</p>
+            <button onclick="reiniciarTodo()" class="btn-retro">VOLVER A JUGAR</button>
+        </div>
+    </div>
+
+    <script src="js/juego3.js"></script>
+    <script src="js/perfil.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo 1-3: Fábrica de Bloques</title>
+    <link rel="stylesheet" href="css/juego2.css">
+    <!-- Fuente estilo retro -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="fondo-mario-fabrica">
+    <div class="perfil">
+
+    <img id="perfilAvatar" class="perfil-avatar">
+
+    <span id="perfilNombre"></span>
+
+</div>
+
+    <div class="interfaz-usuario">
+        <p>MONEDAS: <span id="contador-monedas">0</span></p>
+        <p>ERRORES: <span id="contador-errores">0</span></p>
+        <p>NIVEL 2-2</p>
+    </div>
+
+    <div class="contenedor-juego">
+        <h2 class="titulo-pixel" id="titulo-juego">FÁBRICA DE BLOQUES</h2>
+        <p id="instruccion">Cargando nivel...</p>
+        
+        <!-- Botón para repetir la voz (Inicia oculto hasta que termina la intro) -->
+        <button id="btn-repetir-voz" class="btn-repetir" style="display: none;">
+            &#128266; REPETIR VOZ
+        </button>
+        
+        <!-- Zona Central Dinámica (Presentación y piezas sueltas) -->
+        <div id="contenedor-bloques" class="zona-piezas">
+            <!-- Se generan dinámicamente por JavaScript -->
+        </div>
+
+        <!-- Recipientes/Cajas de destino (Inician ocultas) -->
+        <div id="contenedor-recipientes" class="zona-recipientes" style="display: none;">
+            <!-- Se generan dinámicamente por JavaScript -->
+        </div>
+
+        <!-- Pantalla de Victoria Oculta -->
+        <div id="pantalla-victoria" class="victoria-oculta">
+            <h3>¡MUNDO 1 COMPLETADO!</h3>
+            <p>¡Eres un experto ordenando colores!</p>
+            <button onclick="window.location.href='actividad2.html'" class="btn-siguiente">¡IR AL MUNDO 2!</button>
+        </div>
+    </div>
+
+    <script src="js/juego2.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenamiento de Yoshi - Repaso de Colores</title>
+    <link rel="stylesheet" href="css/repaso.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="fondo-yoshi">
+
+    <div class="perfil">
+        <img id="perfilAvatar" class="perfil-avatar" alt="Avatar">
+        <span id="perfilNombre">Cargando...</span>
+    </div>
+
+    <div class="interfaz-usuario">
+        <p>MONEDAS: <span id="contador-monedas">0</span></p>
+        <p>ENTRENAMIENTO YOSHI</p>
+    </div>
+
+    <div class="zona-yoshi">
+        <img id="img-yoshi" src="img/yoshi.png" alt="🦕" class="yoshi-pixel">
+        <div class="globo-dialogo">
+            <p id="texto-yoshi">¡Hola! Vamos a repasar los colores juntos antes de ir con Bowser.</p>
+        </div>
+    </div>
+    
+    <div id="pantalla-juego" class="pantalla-juego">
+            </div>
+
+        <div class="zona-botones">
+            <button id="btn-siguiente" onclick="siguientePaso()" class="btn-verde" style="display: none;">SIGUIENTE ➔</button>
+        </div>
+    </div>
+
+    <script src="js/perfil.js"></script>
+    <script src="js/repaso.js"></script>
+</body>
+</html>

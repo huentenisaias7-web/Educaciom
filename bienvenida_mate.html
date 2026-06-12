@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Mundo - Mario Math</title>
+    <link rel="stylesheet" href="css/bienvenida_mate.css">
+</head>
+<body>
+
+    <div class="contenedor-menu">
+        <h1 class="titulo-menu">SELECCIONA UN MUNDO</h1>
+        <h2 class="subtitulo-menu">¡Hola, <span id="nombreJugador">Jugador</span>!</h2>
+
+        <div class="grilla-mundos">
+            <div class="tarjeta-mundo" id="bloqueMundo1" onclick="entrarMundo('mundo_suma.html', 1)">
+                <div class="estado-mundo" id="estadoMundo1">DISPONIBLE</div>
+                <div class="icono-mundo">➕</div>
+                <h3>MUNDO 1</h3>
+                <p>Sumas Extremas</p>
+                <div class="puntuacion-mundo" id="puntosMundo1">🪙 x 0</div>
+            </div>
+
+            <div class="tarjeta-mundo" id="bloqueMundo2" onclick="entrarMundo('mundo_resta.html', 2)">
+                <div class="estado-mundo" id="estadoMundo2">DISPONIBLE</div>
+                <div class="icono-mundo">➖</div>
+                <h3>MUNDO 2</h3>
+                <p>El Canje de Bowser</p>
+                <div class="puntuacion-mundo" id="puntosMundo2">🪙 x 0</div>
+            </div>
+
+            <div class="tarjeta-mundo" id="bloqueMundo3" onclick="entrarMundo('mundo_multiplicar.html', 3)">
+                <div class="estado-mundo" id="estadoMundo3">DISPONIBLE</div>
+                <div class="icono-mundo">✖️</div>
+                <h3>MUNDO 3</h3>
+                <p>Tablas del Reino</p>
+                <div class="puntuacion-mundo" id="puntosMundo3">🪙 x 0</div>
+            </div>
+
+            <div class="tarjeta-mundo" id="bloqueMundo4" onclick="entrarMundo('mundo_dividir.html', 4)">
+                <div class="estado-mundo" id="estadoMundo4">DISPONIBLE</div>
+                <div class="icono-mundo">➗</div>
+                <h3>MUNDO 4</h3>
+                <p>Desafío Final</p>
+                <div class="puntuacion-mundo" id="puntosMundo4">🪙 x 0</div>
+            </div>
+        </div>
+
+        <button id="btnVerResultados" class="btn-final-oculto" onclick="irAlTrono()" style="display: none;">
+            👑 VER PUNTUACIÓN FINAL 👑
+        </button>
+    </div>
+
+    <script src="js/bienvenida_mate.js"></script>
+</body>
+</html>

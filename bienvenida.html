@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida - Mario Style</title>
+    <link rel="stylesheet" href="css/bienvenida.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+    <audio id="musicaFondo" src="sonidos/mario-theme.mp3" loop></audio>
+    <audio id="efectoClic" src="sonidos/mario-tubo.mp3"></audio> 
+
+    <div class="contenedor" id="panelCentral">
+        <h1>¡BIENVENIDO!</h1>
+
+        <div class="avatar-wrapper">
+            <img id="avatarImg" class="avatar" alt="Avatar Seleccionado">
+        </div>
+
+        <div id="tuboMario" class="tubo">
+            <div class="tubo-boca"></div>
+            <div class="tubo-cuerpo"></div>
+        </div>
+
+        <div class="estrellas">
+            <span class="estrella estrella1">⭐</span>
+            <span class="estrella estrella2">⭐</span>
+            <span class="estrella estrella3">⭐</span>
+        </div>
+
+        <p id="mensajeNombre"></p>
+
+        <div class="menu-actividades">
+            <a href="#" id="btn1Basico" class="btn-ingresar btn-colores">1° BÁSICO</a>
+            <a href="#" id="btn4Basico" class="btn-ingresar btn-matematicas">4° BÁSICO</a>
+        </div>
+    </div>
+
+    <script src="js/bienvenida.js"></script>
+</body>
+</html>

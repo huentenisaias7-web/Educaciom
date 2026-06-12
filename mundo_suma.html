@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo 1: Sumas - Mario Style</title>
+    <link rel="stylesheet" href="css/mundo_suma.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+    <!-- Efectos de Sonido y Música -->
+    <audio id="musicaFondo" src="sonidos/mario-bgm.mp3" loop></audio>
+    <audio id="sonidoMoneda" src="sonidos/mario-coin.mp3"></audio>
+    <audio id="sonidoError" src="sonidos/mario-bump.mp3"></audio>
+    <audio id="sonidoTubo" src="sonidos/mario-tubo.mp3"></audio>
+    <audio id="sonidoVictoria" src="sonidos/mario-stage-clear.mp3"></audio>
+
+    <!-- INTERFAZ PRINCIPAL DEL JUEGO -->
+    <div class="contenedor-juego" id="panelJuego">
+        <!-- Barra superior (HUD) -->
+        <div class="hud-superior">
+            <div class="hud-item">
+                <span class="hud-etiqueta">MUNDO</span>
+                <span class="hud-valor" id="txtFase">1-1</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-etiqueta">MONEDAS</span>
+                <span class="hud-valor">🪙 x <span id="contadorMonedas">0</span></span>
+            </div>
+        </div>
+
+        <!-- Escenario Visual Interactivo -->
+        <div class="escenario">
+            <div class="barra-progreso"><div class="progreso-llenado" id="barraProgreso"></div></div>
+            
+            <div class="elementos-graficos">
+                <div class="wrapper-personaje">
+                    <img id="avatarImg" class="avatar-mini" alt="Jugador">
+                </div>
+                <div id="objetivoGrafico" class="bloque-sorpresa">?</div>
+            </div>
+        </div>
+
+        <!-- Caja de la Operación Matemática -->
+        <div class="caja-pregunta">
+            <p class="instruccion-pantalla" id="textoInstruccion">¡Rompe el bloque resolviendo la suma!</p>
+            <div class="operacion" id="operacionTexto">000 + 000</div>
+        </div>
+
+        <!-- MECÁNICA JUEGO 1: Teclado Numérico Escrito -->
+        <div class="contenedor-respuesta" id="interfazEscrita">
+            <input type="number" id="inputRespuesta" placeholder="???" readonly>
+            <div class="teclado-numerico">
+                <button onclick="presionarTecla(1)">1</button>
+                <button onclick="presionarTecla(2)">2</button>
+                <button onclick="presionarTecla(3)">3</button>
+                <button onclick="presionarTecla(4)">4</button>
+                <button onclick="presionarTecla(5)">5</button>
+                <button onclick="presionarTecla(6)">6</button>
+                <button onclick="presionarTecla(7)">7</button>
+                <button onclick="presionarTecla(8)">8</button>
+                <button onclick="presionarTecla(9)">9</button>
+                <button onclick="borrarTecla()" class="btn-borrar">❌</button>
+                <button onclick="presionarTecla(0)">0</button>
+                <button onclick="enviarRespuesta()" class="btn-enviar">OK</button>
+            </div>
+        </div>
+
+        <!-- NUEVA MECÁNICA JUEGO 2: Selección Múltiple (Alternativas de Bloques) -->
+        <div class="contenedor-opciones" id="interfazOpciones" style="display: none;">
+            <p class="txt-alerta">¡GOLPEA EL BLOQUE CORRECTO!</p>
+            <div class="grilla-opciones">
+                <button class="bloque-opcion" id="opt0" onclick="seleccionarOpcion(0)">?</button>
+                <button class="bloque-opcion" id="opt1" onclick="seleccionarOpcion(1)">?</button>
+                <button class="bloque-opcion" id="opt2" onclick="seleccionarOpcion(2)">?</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE RESULTADOS FINAL -->
+    <div class="contenedor-resultados" id="panelResultados" style="display: none;">
+        <h1 class="titulo-resultados">¡STAGE CLEAR!</h1>
+        
+        <div class="tarjeta-usuario">
+            <img id="avatarResultados" class="avatar-final" alt="Avatar">
+            <h2 id="nombreResultados">Jugador</h2>
+        </div>
+
+        <div class="tabla-estadisticas">
+            <div class="fila-est">
+                <span>CORRECTAS:</span>
+                <span class="txt-verde" id="resCorrectas">0</span>
+            </div>
+            <div class="fila-est">
+                <span>INCORRECTAS:</span>
+                <span class="txt-rojo" id="resIncorrectas">0</span>
+            </div>
+            <div class="fila-est total-monedas">
+                <span>TOTAL MONEDAS:</span>
+                <span>🪙 <span id="resMonedas">0</span></span>
+            </div>
+        </div>
+
+        <p class="mensaje-felicitacion">¡Has dominado el Mundo de las Sumas!</p>
+
+        <div id="tuboSalida" class="tubo" onclick="volverAlMenu()">
+            <div class="tubo-boca">VOLVER</div>
+            <div class="tubo-cuerpo"></div>
+        </div>
+    </div>
+
+    <script src="js/mundo_suma.js"></script>
+</body>
+</html>
